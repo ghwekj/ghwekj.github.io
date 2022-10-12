@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example 1</title>
-    <link href="css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    
+  <meta charset="UTF-8">
+  <title>Photo Gallery</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="wrapper">
-
+    <h1>Photo Portfolio</h1>
+  <nav>
+    <ul class="menu">
+      <li class="menu-icon"><a href="#"><i class="fa fa-bars"></i></a></li>
+      <li><a href="#camera-photos">Camera Photos</a></li>
+      <li><a href="#ai-photos">AI Photos</a></li>
+      <li><a href="#prefer">Choose</a></li>
+    </ul>
+  </nav>
     
-        <header>
-            <h1>Image Gallery</h1>
-        </header>
-        <div class="hero">
-            <h2>This is an image</h2>
-            
-            <p>Hopefully this Subaru head gasket doesn't blow up</p>
-        </div>
-
-        <div>
-            <img src="img/DSC_0113.JPG" class="car">
-        </div>
-        <section class="gallery">
-                <h3>Gallery of Images</h3>
-                <div>
-                    <img src="img/DSC_0113.JPG" alt="image1">
-                    <img src="img/DSC_0118.JPG" alt="image1">
-                    <img src="img/DSC_0134.JPG" alt="image1">
-                    <img src="img/DSC_0146.JPG" alt="image1">
-                    <img src="img/DSC_0156.JPG" alt="image1">
-                    <img src="img/DSC_0113.JPG" alt="image1">
-                </div>
-        </section> 
-   </div>
-</body>
-
-<footer>
-    <div class="flexbox">
-        <div> <a href="#">Link</a> </div>
-        <div> <a href="#">Link</a> </div>
-        <div> <a href="#">Link</a> </div>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h2>Here are some photos I took and some AI genertated photos which do you prefer?</h2>
+      </div>
     </div>
-</footer>
+    
+    <div class="container">
+        <section id="gallery1">
+            <h1>Photos I took</h1>
+            <a id="camera-photos"></a>
+            <div class="grid">
+              <img src="images/DSC_6589.JPG" alt="A 2005 Subaru Wrx at Seven Eleven at night">
+              <img src="images/DSC_6591.JPG" alt="Mutiple car airfreshners hanging from a car rear view mirror">
+              <img src="images/DSC_6593.JPG" alt="The rear of a 2005 Subaru Wrx at Seven Eleven at night">
+              <img src="images/DSC_6609.JPG" alt="A 3/4 view of a 2005 Subaru Wrx at Seven Eleven at night">
+              <img src="images/DSC_6612.JPG" alt="A 3/4 rear view of a 2005 Subaru Wrx at Seven Eleven at night">
+              <img src="images/DSC_6636.JPG" alt="2 men filling up gas for a 2005 Subaru Wrx at Seven Eleven at night ">
+              <img src="images/DSC_6644.JPG" alt="Closeup of RPM Tachometer reading 3 RPMx1000">
+              <img src="images/DSC_6651.JPG" alt="Closeup of a 2005 Subaru Wrx Steering Wheel">
+              <img src="images/DSC_6959.JPG" alt="A man walking to his 2005 Subaru Wrx at a gas station at night">
+              <h2>I used a Nikon D750 with a 50mm lens with a blue filter</h2>
+            </div>
+        </section>
 
-</html>
+        <section id="gallery2">
+          <h1>AI art prompts</h1>
+          <a id="ai-photos"></a>
+          <div class="grid">
+              <img src="images/DALL·E 2022-10-05 02.23.42 - cyberpunk street photo.png" alt="A highway at night with a single car on it">
+              <img src="images/DALL·E 2022-10-05 02.23.45 - cyberpunk street photo.png" alt="A city street at night with mutiple street lights on">
+              <img src="images/DALL·E 2022-10-05 02.23.48 - cyberpunk street photo.png" alt="Skyscrapers at dawn with diffrent colour lights coming from them">
+              <img src="images/DALL·E 2022-10-05 02.23.51 - cyberpunk street photo.png" alt="A city bridge at night with street lights on">
+              <img src="images/DALL·E 2022-10-05 02.24.32 - lofi city sunset photo.png" alt="A clear blue day in the city with the city peeking through the buildings">
+              <img src="images/DALL·E 2022-10-05 02.24.35 - lofi city sunset photo.png" alt="A warm orange sunset in the city beside two buildings">
+              <img src="images/DALL·E 2022-10-05 02.24.39 - lofi city sunset photo.png" alt="A cold yellow sunset in the city">
+              <img src="images/DALL·E 2022-10-05 02.24.43 - lofi city sunset photo.png" alt="A warm sunset beside a building under construction">
+              <img src="images/DALL·E 2022-10-05 02.25.18 - vaporwave city sunset digital art.png" alt="A vaporwave city sunset">
+              <h2>I used DALL·E 2 AI software to generate these using text prompts</h2>
+          </div>
+      </section>
+
+      <section id="gallery3">
+        <h1>Your favorite?</h1>
+        <a id="prefer"></a>
+        <div class="grid2">
+          <img src="images/DALL·E 2022-10-05 02.25.29 - vaporwave city sunset digital art.png" alt="A bridge into a pink vaporwave city">
+          <img src="images/_DSC4747.jpg" alt="the rear view of a 2005 Subaru Wrx at night">
+          <h2>Which do you prefer AI or the Human artist</h2>
+        </div>
+
+      </section>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script></script>
+<script type="text/javascript" src="js/main.js"></script>
 </html>
