@@ -1,19 +1,23 @@
 body, html {
   height: 100%;
   font-family: sans-serif;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  margin: 0;
 }
   
 h1 {
   text-align: left;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 1rem;
   font-size: 2rem;
 }
     
 h2{
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 1rem;
+  background-color:rgb(186, 223, 0);
+  border-radius: 8px;
+  text-align: center;
 }
 
 h3{
@@ -29,13 +33,13 @@ nav ul{
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  background-color:rgb(137, 207,240);
+  background-color:rgb(186, 223, 0);
   padding: 1rem;
 }
   
 nav li{
   padding: 0.2rem;
-  background-color: rgb(137, 207,240);
+  background-color:rgb(186, 223, 0);
 } 
   
 nav a{
@@ -48,6 +52,10 @@ nav a{
     
 .menu-icon{
   display: none;
+}
+
+img {
+  border-radius: 8px;
 }
   
 .hero-image{
@@ -67,6 +75,19 @@ nav a{
   padding: 1rem;
   background-color: #8e7979;
 }
+
+.main-pic{
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  
+}
+
+.about-pic{
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
   
 
 .container {
@@ -80,8 +101,8 @@ nav a{
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   padding: 1rem;
-    
-  
+  background-color:rgb(186, 223, 0);
+  border-radius: 8px;
 }
     
 .grid img {
@@ -103,11 +124,26 @@ nav a{
   object-fit: cover;
 }
 
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 1rem;
+  background-color:rgb(186, 223, 0);
+  border-radius: 8px;
+}
+  
+.grid3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .footer{
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(137, 207,240);
+  background-color:rgb(186, 223, 0);
   text-align: center;
 }
 
@@ -130,6 +166,10 @@ nav a{
     }
   
     .grid2{
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .grid3{
       grid-template-columns: 1fr 1fr;
     }
 }
@@ -161,7 +201,7 @@ nav a{
     }
 }
   
-  
+
   
   
     
