@@ -5,7 +5,6 @@ $(document).ready(function(){
     })
 })
 
-
 var client = contentful.createClient({
     space: '0dvxaww6ggfz',
     accessToken: 'r_ISKEY6iqBc3nczRo1Vd8FOFytRRqu2YUklKU5dWiU',
