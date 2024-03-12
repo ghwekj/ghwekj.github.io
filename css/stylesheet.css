@@ -1,0 +1,349 @@
+/* GDES306 | MMDD253 - Coding Your Portfolio     */
+/* Extra small devices (phones, less than 600px) */
+/* No media query since this is the default CSS */
+
+/* Basic page styling */
+:root {
+    /* These are global variables that you can use in your CSS */
+    --black:black;
+    --dark-grey:#333;
+    --mid-grey:#666;
+    --light-grey:#999;
+    --white:white;
+    --accent-colour:yellow;
+    --headline-font:Gotham, serif;
+    --body-font:helvetica, serif;
+    --horizontal-shift:6px;
+    --section-padding-top:120px;
+}
+* {
+      margin: 0; padding: 0;
+    transition: 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+ }
+ h1, h2, h3, h4, h5, h6 {
+   font-family: var(--headline-font);
+ }
+ h1 {
+   font-size: calc(40px + (72 - 40) * (100vw - 400px) / (1800 - 400));
+   margin-bottom: 3rem;
+ }
+ h2 {
+   font-size: calc(32px + (48 - 32) * (100vw - 400px) / (1800 - 400));
+   margin-bottom: 1.5rem;
+ }
+ h3 {
+   font-size: calc(20px + (28 - 20) * (100vw - 400px) / (1800 - 400));
+ }
+ p {font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+   margin-bottom:2rem;
+}
+
+a {font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400)); 
+text-decoration: none;
+color: var(--black);
+}
+
+
+.navexpanded #close-icon {
+  display:none;
+}
+a:visited {
+color: var(--black);
+}
+
+.btn {
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: var(--accent-colour);
+    color: var(--black);
+    padding-left: calc(32px + var(--horizontal-shift));
+}
+
+.btn:visited {
+    color: var(--white);
+}
+
+.btn:hover:visited {
+    color: var(--black);
+}
+
+/* Styling the Navigation */
+header {
+    position: fixed;
+  width: 100%;
+  z-index: 10;
+  }
+  nav {
+    overflow: hidden;
+    background: var(--white);
+    height: 170px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+  nav ul > li {
+    margin-top: 14px;
+    flex-basis: 100%;
+}
+  nav ul li a {
+    text-decoration: none;
+    color: var(--black);
+    margin: 20px;
+}
+  nav ul li a:hover {
+    text-decoration: none;
+    color: var(--dark-grey);
+    background: var(--accent-colour);
+}
+
+.featured {
+ grid-column: 1/-1; 
+ } /*This Class can be used to stretch an item the entire width of the parent grid */
+
+#logo {
+    margin-right: auto;
+    flex-basis: 100%;
+    text-align: left;
+}
+  #logo img {
+    height: 2rem;
+  width: auto;
+}
+  #menu-icon {
+    margin-left: auto;
+    flex-basis: 50%;
+    text-align: right;
+    font-size: 40px;
+    margin-top: 0px;
+}
+  #logo a:hover,
+  #menu-icon a:hover {
+    background: none;
+}
+
+/* Styling the Navigation */
+nav {
+    overflow: hidden;
+    background: var(--white);
+    height: 60px;
+  }
+  .navexpanded {
+    height: 170px;
+}
+
+#menu-icon,
+#close-icon {
+  margin-left: auto;
+  flex-basis: 50%;
+  text-align: right;
+  font-size: 40px;
+margin-top: 0px;
+}
+#close-icon {
+    display:none;
+}
+.navexpanded #close-icon {
+    display:inline-block;
+}
+.navexpanded #menu-icon {
+    display:none;
+}
+
+img {
+  width:100%;
+}
+
+#logo a:hover,
+#menu-icon a:hover,
+#close-icon a:hover {
+background: none;}
+
+/* Styling for the Sections */
+section {
+    display: grid;
+    min-height: calc(100vh - var(--section-padding-top));
+    padding-top: var(--section-padding-top);
+    grid-template-columns: 5% 1fr 5%;
+  align-content: start;}
+  section > * {
+  grid-column: 2;
+}
+
+/* Styling the Sections */
+.two-columns {
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap:2rem;
+  margin-bottom:2rem;
+}
+/* Small devices (i.e. tablets in portrait) */
+@media (min-width: 600px) {
+  .two-columns {
+   grid-template-columns:1fr 1fr;
+  }
+}
+
+.two-columns-fixed {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-gap:2rem;
+  margin-bottom:2rem;
+}
+
+/* Styling for the Introduction */
+#introduction {
+    align-content: center;
+    
+}
+
+/* Styling for the Portfolio Section */
+#portfolio a:hover h3,
+#portfolio a:hover p {
+  padding-left:var(--horizontal-shift);
+}
+
+#about ul {
+  list-style: none;
+}
+
+/* Styling the Contact section */
+#contact {
+ min-height:auto;
+}
+#contact ul{ 
+  display: flex;
+  list-style-type: none;
+  margin-bottom:1rem;
+}
+#contact ul li a {
+  text-decoration: none;
+  color: var(--accent-colour);
+  margin: 0 20px 0 0;
+  font-size: 32px;
+}
+#contact ul li a:hover {
+  text-decoration: none;
+  color: var(--mid-grey);
+}
+
+/* Styling to invert the colour scheme. Add this class to a section */
+.inverted-colours {
+  background:var(--black);
+  color:var(--white);
+}
+.inverted-colours a {
+  color:var(--white);
+}
+.inverted-colours a:visited {
+ color:var(--white);
+}
+
+.inverted-colours .btn {
+  color:var(--black);
+  background:var(--white);
+}
+.inverted-colours .btn:hover {
+  color:var(--black);
+  background:var(--accent-colour);
+}
+
+#about .intro-paragraph {
+  font-size: calc(20px + (28 - 20) * (100vw - 400px) / (1800 - 400));
+  grid-column: 1/-1;
+}
+
+.three-columns {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-gap:2rem;
+  margin-bottom:2rem;
+}
+
+.auto-height {
+  min-height: auto;
+}
+@media (min-width: 600px) { .three-columns {
+     grid-template-columns:1fr 1fr 1fr;
+} }
+
+/* Small devices (i.e. tablets in portrait) */
+@media (min-width: 600px) {
+    section {
+    grid-template-columns: 15% 1fr 15%;}
+  }
+
+/* Small devices (i.e. tablets in portrait) */
+@media (min-width: 600px) {
+    nav {
+    height: 60px;}
+    .navexpanded {
+      height: 60px;
+  } }
+
+/* Small devices (i.e. tablets in portrait) */
+@media (min-width: 600px) {
+    nav {
+    height: 60px;
+}
+  nav ul {
+      flex-direction: row;
+    align-items: baseline;
+}
+    nav ul > li {
+    flex-basis: auto;
+}
+    #logo {
+    flex-basis: auto;
+}
+  #menu-icon {
+      display: none;
+  } }
+
+
+/* Small devices (i.e. tablets in portrait) */
+@media (min-width: 600px) {
+
+
+}
+
+/* Medium devices (i.e. tablets in landscape */
+@media (min-width: 900px) {
+
+
+}
+
+/* Large devices (i.e. desktop) */
+
+@media (min-width: 1200px) {
+
+
+}
+
+/* X-Large devices (i.e. big desktop) */
+
+@media (min-width: 1800px) {
+
+    
+}
